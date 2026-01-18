@@ -1,0 +1,21 @@
+<%= form_with model: book do |f| %>
+  <% if book.errors.any? %>
+    <div id="error_explanation">
+      <h3><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h3>
+      <ul>
+        <% book.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p><span>Title</span></p>
+  <%= f.text_field :title %>
+
+<p><span>Body</span></p>
+<%= f.text_area :body %>
+
+
+  <p><%= f.submit %></p>
+<% end %>

@@ -1,0 +1,139 @@
+body {
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a { color: #000; }
+a:visited { color: #666; }
+a:hover { color: #fff; background-color: #000; }
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th, td {
+  padding: 1px 10px 7px;
+  vertical-align: top;
+}
+
+th:nth-child(1),
+td:nth-child(1) { width: 180px; }
+
+th:nth-child(2),
+td:nth-child(2) { width: 360px; }
+
+/* フォーム */
+form p {
+  margin: 0 0 5px;
+}
+
+form input[type="text"],
+form textarea {
+  margin-bottom: 10px;
+}
+
+form input[type="submit"] {
+  margin-top: 5px;
+}
+
+/* textarea の入力文字を左寄せ固定 */
+form textarea {
+  text-align: left !important;
+  text-indent: 0 !important;
+  padding-left: 0 !important;
+  direction: ltr !important;
+  margin-left: 0 !important;
+}
+
+/* エラーボックス */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h3 {
+  margin: -10px -10px 10px;
+  padding: 6px 10px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+#error_explanation ul {
+  margin: 0;
+  padding: 15px 0 15px 40px;
+}
+
+#error_explanation li {
+  margin: 8px 0;
+  line-height: 18px;
+}
+
+/* エラー入力欄（枠） */
+.field_with_errors input[type="text"],
+.field_with_errors textarea {
+  border: 2px solid red !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: white;
+}
+
+/* textarea の外側に赤い“ふち”を作る（左画像っぽく） */
+.field_with_errors:has(textarea) {
+  background: red;
+  padding: 1px 3px;        /* ふちの太さ：上下1px/左右3px */
+  display: inline-block;
+  margin: 0;
+}
+
+/* ★青枠の「下に残る赤」を半分にする：textareaの下余白が原因 */
+.field_with_errors textarea {
+  margin-bottom: 5px !important; /* 10px → 半分 */
+}
+
+/* エラー項目のラベル（文字の周りだけ赤・隙間なし） */
+p:has(+ .field_with_errors) {
+  margin: 0;               /* ラベルと枠をくっつける */
+}
+
+p:has(+ .field_with_errors) span {
+  background: red;
+  color: black;
+  padding: 2px 6px;         /* 文字の周りだけ赤にする */
+}
+
+.top-message {
+  margin: 30px;   /* ← ここを調整 */
+}
+
+.top-start{
+  margin: 30px;   /* ← ここを調整 */
+}
+
+.show_title {
+  margin: 30px;   /* ← ここを調整 */
+}
+
+.show_body {
+  margin: 30px;   /* ← ここを調整 */
+}
+
+.notice {
+  margin: 30px;
+  color: green; 
+}
+.flash-alert  { color: red; }
